@@ -1,0 +1,324 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+*
+
+#grid-area
+{
+    display:grid;
+    gap: 0px;
+    min-height: 100vh;
+    width: 100%;
+    grid-template-areas: 
+        "logo"
+        "body"
+        "pie";
+    grid-template-rows: 60px 1fr 60px;
+}
+
+header 
+{
+    background-color: gray;
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+header .logo img
+{
+    height: 50px;
+    position: relative;
+    top: 2px;
+    left: 5px;
+} 
+
+@media screen and (max-width: 750px)
+{
+    header .logo img
+    {
+        display: none;
+    }
+}
+
+header .logo_red_header img
+{
+    height: 50px;
+    position: absolute;
+    top: 1%;
+    left: 8%;
+} 
+
+
+@media screen and (min-width: 750px)
+{
+    header .logo_red_header img
+    {
+        display: none;
+    }
+}
+
+
+header .pestañas
+{
+    width: 100%;
+}
+
+@media screen and (max-width: 750px)
+{
+    .pestañas
+    {
+        display: none;
+    }
+}
+
+header .pestañas ul
+{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 20px;
+    padding: 10px;
+}
+
+header .pestañas ul li a
+{
+    color: black;
+    text-decoration: none;
+    transition: font-size;
+}
+
+header .pestañas ul li a:hover
+{
+    color: white;
+    width: auto;
+    height: auto;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+@media screen and (min-width: 750px)
+{
+    .hamburguesa
+    {
+        display: none;
+    }
+}
+
+.lista_ham
+{
+    display: none;
+    list-style: none;
+}
+
+input:checked  ~ .lista_ham
+{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    background-color: gray;
+    font-size: calc(0.8em + 1.5vw);
+    z-index: 2;
+}
+
+input
+{
+    display: none;
+}
+
+.menu_ham
+{
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    position: absolute;
+    left:50%;
+    top:3%;
+}
+
+.lista_ham li
+{
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+.lista_ham li a
+{
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+}
+
+.menu_ham:hover
+{
+    background: white;
+}
+
+input:checked ~ label 
+{
+    background: gray; 
+}
+
+.lista_ham li:hover 
+{
+    background: white;
+    text-decoration: none;
+}
+
+header .menu
+{
+    position: relative;
+    right: 15%;
+    font-size: 13px;
+} 
+
+@media screen and (max-width: 830px)
+{
+    header .menu
+    {
+        position: absolute;
+        right: 5%;
+        top: 4%;
+    }
+}
+
+section
+{
+    background: linear-gradient(to right, rgba(255,255,255,0), rgb(78, 77, 77)), url(../Imagenes/fondo_home.jpg);
+   /*  background-image:url(../Imagenes/fondo_home.jpg); */
+    grid-area: body;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+} 
+
+.titulo
+{
+    color:red;
+    font-size: calc(0.5em + 1.5vw);
+    padding: 30px;
+}
+
+.clientes1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imagenes
+{
+    width: calc(17vw);
+    margin: 10px;
+}
+
+
+footer
+{
+    background-color: gray;
+    width: 100%;
+    grid-area: pie;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+footer .contacto1
+{
+    align-items: center;
+    position: absolute;
+    left: 5%;
+    font-size: calc(0.60em + 0.60vw);
+}
+
+@media screen and (max-width: 900px)
+{
+    .contacto1
+        {
+            display:none;
+        }
+}
+
+footer .contacto2
+{
+    align-items: center;
+    position: absolute;
+    left: 18%;
+    font-size: calc(0.60em + 0.60vw);
+}
+
+@media screen and (max-width: 900px)
+{
+    .contacto2
+        {
+            display:none;
+        }
+}
+
+footer .contacto3
+{
+    align-items: center;
+    position: absolute;
+    left: 35%;
+    font-size: calc(0.60em + 0.60vw);
+}
+
+@media screen and (max-width: 900px)
+{
+    .contacto3
+        {
+            display:none;
+        }
+}
+
+.logo_reducido
+{
+    height: 40px;
+    position: absolute;
+    left: 50%;
+}
+
+@media screen and (max-width: 900px)
+{
+    .logo_reducido
+        {
+            position: absolute;
+            left: 8%;
+        }
+}
+
+.social
+{
+    display: flex;
+    position: absolute;
+    right: 15%;
+    align-items: center;
+    font-size: calc(0.60em + 0.60vw);
+}
+
+.redes1 
+{
+    height: 30px;
+    margin: 5px;
+    position: relative;
+    left: 85%;
+}
+.redes2 
+{
+    height: 30px;
+    position: relative;
+    left: 200%;
+}
