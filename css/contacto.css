@@ -88,6 +88,7 @@ header .pestañas ul li a
 {
     color: black;
     text-decoration: none;
+    transition: font-size;
 }
 
 header .pestañas ul li a:hover
@@ -97,7 +98,7 @@ header .pestañas ul li a:hover
     height: auto;
     text-align: center;
     color: white;
-
+    font-size: 30px;
 }
 
 @media screen and (min-width: 750px)
@@ -194,7 +195,8 @@ header .menu
 
 section
 {
-    background-image:url(../Imagenes/fondo_home.jpg);
+    background: linear-gradient(to right, rgba(255,255,255,0), rgb(78, 77, 77)), url(../Imagenes/fondo_home.jpg);
+    /* background-image:url(../Imagenes/fondo_home.jpg); */
     grid-area: body;
     background-size: contain;
     display: flex;
@@ -210,6 +212,7 @@ section
     position: relative;
     top: 5%;
     left: 3%;
+    transform:rotate(355deg);
 }
 
 .nombre
@@ -225,6 +228,12 @@ section
 .nombre1
 {
     width: calc(15vw);
+}
+
+input:focus
+{
+    height: calc(2vw);
+    background-color: rgb(223, 155, 155);
 }
 
 .email
@@ -270,6 +279,11 @@ section
 {
     width:calc(35vw);
     height: calc(10vw);
+}
+
+textarea:focus
+{
+    background-color: rgb(223, 155, 155);
 }
 
 @media screen and (max-width: 900px)

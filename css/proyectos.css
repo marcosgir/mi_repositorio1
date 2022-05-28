@@ -88,6 +88,7 @@ header .pestañas ul li a
 {
     color: black;
     text-decoration: none;
+    transition: font-size;
 }
 
 header .pestañas ul li a:hover
@@ -97,7 +98,7 @@ header .pestañas ul li a:hover
     height: auto;
     text-align: center;
     color: white;
-
+    font-size: 30px;
 }
 
 @media screen and (min-width: 750px)
@@ -195,7 +196,8 @@ header .menu
 
 section
 {
-    background-image:url(../Imagenes/fondo_home.jpg);
+    background: linear-gradient(to right, rgba(255,255,255,0), rgb(78, 77, 77)), url(../Imagenes/fondo_home.jpg);
+    /* background-image:url(../Imagenes/fondo_home.jpg); */
     grid-area: body;
     background-size: contain;
     display: flex;
@@ -212,12 +214,38 @@ section
     }
 }
 
+@keyframes efecto2
+{
+    0%
+    {
+        transform: rotate(0deg) ;
+    }
+    25%
+    {
+        transform: rotate(45deg);
+    }
+    50%
+    {
+        transform: rotate(0deg);
+    }
+    75%
+    {
+        transform: rotate(-45deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+
 .titulo
 {
     color:red;
     font-size: calc(0.5em + 1.5vw);
     padding: 30px;
+    animation: efecto2 5s linear 0s infinite;
 }
+
 
 @media screen and (max-width: 1000px)
 {
